@@ -148,7 +148,6 @@ do_font_auto_setup() {
     echo -e "${C}  ───[${W} SETUP AI ${C}]───${RS}"
     echo ""
 
-    # Skip if already installed
     if [ -f "$HOME/.termux/font.ttf" ]; then
         echo -e "${G}  [✓] FONT ALREADY INSTALLED!${RS}"
         echo -e "${Y}  ➤ SKIPPING DOWNLOAD.${RS}"
@@ -179,7 +178,6 @@ do_font_auto_setup() {
     mkdir -p "$extract_dir"
     unzip -o -q "${temp_zip}" "*.ttf" -d "$extract_dir" 2>/dev/null
 
-    # Auto-select variant 60 = JetBrainsMonoNerdFont-Regular.ttf
     local regular_font=$(find "$extract_dir" -name "JetBrainsMonoNerdFont-Regular.ttf" -type f | head -1)
 
     if [ -n "$regular_font" ] && [ -f "$regular_font" ]; then
@@ -293,18 +291,9 @@ function ble/util/notify-broken-locale {
 }
 
 # === ENTER KEY FIX ===
-# Disable multi-line auto detection
-bleopt edit_magic_multiline=none
+bleopt edit_magic_accept=
 bleopt edit_magic_multiline=
-
-# Disable bracketed paste (main fix)
-bleopt bracketed_paste=off
-
-# Don't wait for extra accept after paste
-bleopt paste_expect_accept=
-
-# Errexit mark off
-bleopt exec_errexit_mark=
+bleopt term_bracketed_paste_mode=off
 
 # Bind Enter to accept-line in all modes
 ble-bind -m emacs -f C-m 'accept-line'
@@ -407,21 +396,52 @@ do_remove_lock() {
     system_menu
 }
 
+# ───────────────────────────────────────────────────────────
+#  OPTION 03 (in system_menu) — AUTO UPDATE
+# ───────────────────────────────────────────────────────────
 do_update() {
     banner
-    echo -e "${Y}[*] CHECKING FOR UPDATES...${RS}"
-    git -C "$REPO_DIR" fetch origin
-    local LOCAL=$(git -C "$REPO_DIR" rev-parse HEAD)
-    local REMOTE=$(git -C "$REPO_DIR" rev-parse "origin/main" 2>/dev/null || git -C "$REPO_DIR" rev-parse "origin/master")
-    if [ "$LOCAL" = "$REMOTE" ]; then
-        echo -e "${G}[√] ALREADY LATEST VERSION.${RS}"
+    echo -e "${Y}[*] AUTO UPDATING N-THEME...${RS}"
+    echo ""
+    cd "$REPO_DIR"
+
+    if [ ! -d .git ]; then
+        echo -e "${R}[!] NOT A GIT REPOSITORY.${RS}"
         sleep 2
         system_menu
-    else
-        git -C "$REPO_DIR" pull
-        echo -e "${G}[√] UPDATED! RESTARTING...${RS}"
+        return
+    fi
+
+    echo -e "${C}[*] Fetching latest version...${RS}"
+    git fetch origin 2>/dev/null
+
+    local BRANCH=$(git branch --show-current)
+    [ -z "$BRANCH" ] && BRANCH="main"
+
+    local LOCAL=$(git rev-parse HEAD 2>/dev/null)
+    local REMOTE=$(git rev-parse "origin/$BRANCH" 2>/dev/null)
+
+    if [ "$LOCAL" = "$REMOTE" ]; then
+        echo -e "${G}[√] ALREADY LATEST VERSION!${RS}"
+        echo -e "${Y}  ➤ NO UPDATE NEEDED.${RS}"
+        sleep 2
+        menu
+        return
+    fi
+
+    echo -e "${Y}[*] NEW VERSION FOUND. DOWNLOADING...${RS}"
+    git pull origin "$BRANCH" 2>/dev/null
+
+    if [ $? -eq 0 ]; then
+        echo ""
+        echo -e "${G}[√] UPDATE COMPLETED SUCCESSFULLY!${RS}"
+        echo -e "${Y}  ➤ RESTARTING SCRIPT...${RS}"
         sleep 2
         exec bash "$REPO_DIR/install.sh"
+    else
+        echo -e "${R}[!] UPDATE FAILED.${RS}"
+        sleep 2
+        system_menu
     fi
 }
 
@@ -429,7 +449,7 @@ system_menu() {
     banner
     printf "\n${left_pad}${C}[${W}01${C}]${B} ADD CYBER LOCK"
     printf "\n${left_pad}${C}[${W}02${C}]${R} REMOVE LOCK"
-    printf "\n${left_pad}${C}[${W}03${C}]${W} UPDATE N-THEME"
+    printf "\n${left_pad}${C}[${W}03${C}]${W} UPDATE N-THEME ${G}(AUTO)"
     printf "\n${left_pad}${C}[${W}00${C}]${R} BACK TO MAIN MENU\n\n"
 
     echo -ne "${left_pad}${C}SELECTION: ${RS}"
