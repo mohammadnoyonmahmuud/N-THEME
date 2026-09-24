@@ -27,7 +27,7 @@ margin=$(( (term_width - BOX_WIDTH) / 2 ))
 left_pad=$(printf '%*s' "$margin" "")
 
 # ───────────────────────────────────────────────────────────
-#  SIMPLE BANNER (No big ASCII)
+#  SIMPLE BANNER
 # ───────────────────────────────────────────────────────────
 banner() {
     clear
@@ -196,7 +196,6 @@ apply_shell_customizations() {
         cp "$REPO_DIR/.object/ANSI Shadow.flf" "$figlet_dir/ASCII-Shadow.flf"
     fi
 
-    # Banner Script
     local banner_script="$HOME/.n-theme-banner.sh"
     cat << 'EOF' > "$banner_script"
 #!/bin/bash
@@ -307,71 +306,19 @@ EOF
 }
 
 # ───────────────────────────────────────────────────────────
-#  SECURITY & UPDATES
-# ───────────────────────────────────────────────────────────
-do_add_lock() {
-    banner
-    echo -e "\n${C}INITIALISING SECURITY PROTOCOL...${RS}"
-    echo -ne "${Y}CREATE ACCESS KEY: ${RS}"
-    read -s new_pass
-    echo
-    new_pass_hash=$(echo -n "$new_pass" | sha256sum | cut -d' ' -f1)
-
-    lock_code="#LOCK_START
-clear
-attempt=1
-while [ \$attempt -le 3 ]; do
-    echo -e \"\n${C}╔══════════════════════════════════════╗\"
-    echo -e \"║        ${R}N-THEME SECURE ACCESS        ${C}║\"
-    echo -e \"╚══════════════════════════════════════╝${RS}\"
-    echo -ne \"${Y} [ATTEMPT \$attempt/3] ENTER KEY: ${RS}\"
-    read -s pass_input
-    echo
-    entered_hash=\$(echo -n \"\$pass_input\" | sha256sum | cut -d' ' -f1)
-    if [ \"\$entered_hash\" = \"$new_pass_hash\" ]; then
-        echo -e \"${G} ACCESS GRANTED.${RS}\"
-        sleep 1
-        clear
-        break
-    else
-        echo -e \"${R} DENIED.${RS}\"
-        [ \$attempt -eq 3 ] && exit
-        attempt=\$((attempt + 1))
-    fi
-done
-#LOCK_END"
-
-    if [ -f ~/.bashrc ]; then
-        echo "$lock_code" > ~/.bashrc.tmp
-        cat ~/.bashrc >> ~/.bashrc.tmp
-        mv ~/.bashrc.tmp ~/.bashrc
-    fi
-    echo -e "${G}LOCK CONFIGURED.${RS}"
-    sleep 2
-    system_menu
-}
-
-do_remove_lock() {
-    banner
-    sed -i '/#LOCK_START/,/#LOCK_END/d' ~/.bashrc
-    echo -e "${R}LOCK REMOVED.${RS}"
-    sleep 2
-    system_menu
-}
-
-# ───────────────────────────────────────────────────────────
-#  AUTO UPDATE
+#  AUTO UPDATE (Option 04 — runs directly)
 # ───────────────────────────────────────────────────────────
 do_update() {
     banner
     echo -e "${Y}[*] AUTO UPDATING N-THEME...${RS}"
     echo ""
+
     cd "$REPO_DIR" 2>/dev/null
 
     if [ ! -d .git ]; then
         echo -e "${R}[!] NOT A GIT REPOSITORY.${RS}"
         sleep 2
-        system_menu
+        menu
         return
     fi
 
@@ -404,29 +351,8 @@ do_update() {
     else
         echo -e "${R}[!] UPDATE FAILED.${RS}"
         sleep 2
-        system_menu
+        menu
     fi
-}
-
-# ───────────────────────────────────────────────────────────
-#  SUB MENU — SECURITY & UPDATES
-# ───────────────────────────────────────────────────────────
-system_menu() {
-    banner
-    printf "\n${left_pad}${C}[${W}01${C}]${B} ADD CYBER LOCK"
-    printf "\n${left_pad}${C}[${W}02${C}]${R} REMOVE LOCK"
-    printf "\n${left_pad}${C}[${W}03${C}]${W} UPDATE N-THEME ${G}(AUTO)"
-    printf "\n${left_pad}${C}[${W}00${C}]${R} BACK TO MAIN MENU\n\n"
-
-    echo -ne "${left_pad}${C}SELECTION: ${RS}"
-    read a
-    case $a in
-        1|01) do_add_lock ;;
-        2|02) do_remove_lock ;;
-        3|03) do_update ;;
-        0|00) menu ;;
-        *) system_menu ;;
-    esac
 }
 
 # ───────────────────────────────────────────────────────────
@@ -437,7 +363,7 @@ menu() {
     printf "\n${left_pad}${C}[${W}01${C}]${G} NECESSARY SETUP"
     printf "\n${left_pad}${C}[${W}02${C}]${G} SETUP YOUR NAME"
     printf "\n${left_pad}${C}[${W}03${C}]${B} SETUP AI"
-    printf "\n${left_pad}${C}[${W}04${C}]${W} SECURITY & UPDATES"
+    printf "\n${left_pad}${C}[${W}04${C}]${W} AUTO UPDATE N-THEME"
     printf "\n${left_pad}${C}[${W}00${C}]${R} EXIT TERMINAL\n\n"
 
     echo -ne "${left_pad}${C}SELECTION: ${RS}"
@@ -446,7 +372,7 @@ menu() {
         1|01) do_full_setup ;;
         2|02) do_bash_quick_setup ;;
         3|03) do_font_auto_setup ;;
-        4|04) system_menu ;;
+        4|04) do_update ;;
         0|00) exit ;;
         *) menu ;;
     esac
