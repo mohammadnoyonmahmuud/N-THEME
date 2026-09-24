@@ -218,7 +218,7 @@ This project is licensed under the **GPL-30 License** — see the [LICENSE](LICE
 
 ---
 
-##### 👤 AUTHOR
+##### 👤MODED AUTHOR
 
 <div align="center">
 
