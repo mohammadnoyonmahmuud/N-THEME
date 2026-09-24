@@ -103,13 +103,6 @@ bash install.sh
 
 ---
 
-</div>
-
----
-
-</div>
-
----
 
 
 
