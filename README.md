@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00E5FF&center=true&vCenter=true&width=700&lines=TERMUX+BANNER+AND+THEMES+CHANGER" alt="Animated Banner" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=42&pause=1000&color=FF1744&center=true&vCenter=true&width=800&height=80&lines=TERMUX+BANNER+AND+THEMES+CHANGER" alt="Animated Banner" />
 
 # ✦ N-THEME ✦
 
@@ -21,7 +21,7 @@
 
 ---
 
-## 📦 Requirements
+##### 📦 Requirements
 
 Before installing, make sure you have:
 
@@ -32,21 +32,21 @@ Before installing, make sure you have:
 
 ---
 
-## ⚙ Installation
+##### ⚙ Installation
 
-### 🔹 Step 1 — Update packages
+##### 🔹 Step 1 — Update packages
 
 ```bash
 pkg update && pkg upgrade -y
 ```
 
-### 🔹 Step 2 — Install required packages
+##### 🔹 Step 2 — Install required packages
 
 ```bash
 pkg install git python -y
 ```
 
-### 🔹 Step 3 — Setup storage access
+##### 🔹 Step 3 — Setup storage access
 
 ```bash
 termux-setup-storage
@@ -54,19 +54,19 @@ termux-setup-storage
 
 > 📲 A permission popup will appear — tap **Allow**.
 
-### 🔹 Step 4 — Clone this repository
+##### 🔹 Step 4 — Clone this repository
 
 ```bash
 git clone https://github.com/mohammadnoyonmahmuud/N-THEME.git
 ```
 
-### 🔹 Step 5 — Enter the directory
+##### 🔹 Step 5 — Enter the directory
 
 ```bash
 cd N-THEME
 ```
 
-### 🔹 Step 6 — Run the installer
+##### 🔹 Step 6 — Run the installer
 
 ```bash
 bash install.sh
@@ -74,9 +74,9 @@ bash install.sh
 
 ---
 
-## ◈ Menu Options
+##### ◈ Menu Options
 
-### 1️⃣ Download necessary files
+##### 1️⃣ Download necessary files
 
 Runs an **automated step-by-step installer** in the background:
 
@@ -93,13 +93,13 @@ Runs an **automated step-by-step installer** in the background:
 
 Each step runs **sequentially** — one after another, cleanly.
 
-### 2️⃣ Setup Banner
+##### 2️⃣ Setup Banner
 
 - Prompts you to enter your name
 - Automatically converts to **UPPERCASE** (`noyon` → `NOYON`)
 - Saves **permanently** as your animated banner
 
-### 3️⃣ Setup Name
+##### 3️⃣ Setup Name
 
 - Prompts you to enter your name
 - Saves as your prompt in this format:
@@ -112,7 +112,7 @@ TERMUX@NOYON$
 
 ---
 
-## ❓ FAQ
+##### ❓ FAQ
 
 <details>
 <summary><b>◈ Does it work on root?</b></summary>
@@ -134,7 +134,7 @@ No ✅ — `ble.sh` is lightweight and optimized. Startup delay is negligible.
 
 ---
 
-## 🛠 Tech Stack
+##### 🛠 Tech Stack
 
 | 🧩 Tool | 🎯 Purpose |
 |:--------|:-----------|
@@ -146,7 +146,7 @@ No ✅ — `ble.sh` is lightweight and optimized. Startup delay is negligible.
 
 ---
 
-## 🤝 Contributing
+##### 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -158,13 +158,13 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
+##### 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👤 Author
+##### 👤 Author
 
 <div align="center">
 
@@ -178,7 +178,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-### ⭐ If you like this project, give it a star! ⭐
+##### ⭐ If you like this project, give it a star! ⭐
 
 **Crafted with ❤ by Noyon**
 
