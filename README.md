@@ -21,18 +21,6 @@
 
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| 🎨 **Premium Colors** | Rich, saturated, eye-soothing palette — no dull or lowlight tones |
-| 🖼️ **Animated Banner** | Beautiful ASCII art banner with your name, appears on every Termux launch |
-| 💻 **Custom Prompt** | Elegant prompt format: `TERMUX@YOURNAME$` |
-| ⌨️ **Auto-Suggestion** | History-based suggestions — type a few letters, get the full command |
-| 🔒 **Permanent Setup** | Stays as long as Termux is installed on your device |
-| 🧹 **Clean Interface** | Removes default Termux welcome clutter — only your banner & prompt |
-| ⚡ **One-Command Install** | Fully automated, step-by-step background installer |
-
----
-
 ## 📦 Requirements
 
 Before installing, make sure you have:
@@ -86,21 +74,6 @@ bash install.sh
 
 ---
 
-## 🎛️ Menu Options
-
-After launching `install.sh`, you'll see a premium menu:
-
-```
-╔══════════════════════════════════════╗
-║        ✦ N-THEME INSTALLER ✦         ║
-╠══════════════════════════════════════╣
-║                                      ║
-║   [1]  Download necessary files      ║
-║   [2]  Setup Banner                  ║
-║   [3]  Setup Name                    ║
-║                                      ║
-╚══════════════════════════════════════╝
-```
 
 ### 1️⃣ Download necessary files
 
