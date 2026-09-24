@@ -1,0 +1,18 @@
+# Backup files
+*.bak
+*.tmp
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# N-THEME specific
+backup/
+cache/
+*.log
