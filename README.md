@@ -35,6 +35,11 @@ Before installing, make sure you have:
 
 ---
 
+
+
+
+
+
 ##### ⚙ Installation
 
 ##### 🔹 Step 1 — Update packages
@@ -76,6 +81,11 @@ bash install.sh
 ```
 
 ---
+
+
+
+
+
 
 ##### ◈ Menu Options
 
@@ -137,6 +147,12 @@ No ✅ — `ble.sh` is lightweight and optimized. Startup delay is negligible.
 
 ---
 
+
+
+
+
+
+
 ##### 🛠 Tech Stack
 
 | 🧩 Tool | 🎯 Purpose |
@@ -160,6 +176,10 @@ Contributions, issues, and feature requests are welcome!
 5. 🎯 Open a **Pull Request**
 
 ---
+
+
+
+
 
 ##### 📄 License
 
