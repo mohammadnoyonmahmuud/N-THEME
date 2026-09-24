@@ -207,11 +207,9 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
-##### 👤 Author
+##### 👤 AUTHOR
 
 <div align="center">
-
-**Mohammad Noyon Mahmud**
 
 [![GitHub](https://img.shields.io/badge/GitHub-mohammadnoyonmahmuud-181717?style=for-the-badge&logo=github&labelColor=0D1117)](https://github.com/mohammadnoyonmahmuud)
 
