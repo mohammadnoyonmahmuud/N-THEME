@@ -2,10 +2,9 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=900&size=38&duration=2800&pause=900&color=00FF41&center=true&vCenter=true&width=900&height=75&lines=TERMUX+BANNER+AND+THEMES+CHANGER" alt="Title" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2800&pause=900&color=39FF14&center=true&vCenter=true&width=900&height=55&lines=%E2%9C%A6+PREMIUM+%E2%9C%A6+ELEGANT+%E2%9C%A6+PERMANENT" alt="Subtitle" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2800&pause=900&color=FF0000&center=true&vCenter=true&width=900&height=55&lines=%E2%9C%A6+PREMIUM+%E2%9C%A6+ELEGANT+%E2%9C%A6+PERMANENT" alt="Subtitle" />
 
-
-# ✦ N-THEME ✦
+#  N-THEME 
 
 ### ◈ A Premium Termux Theme ◈
 
