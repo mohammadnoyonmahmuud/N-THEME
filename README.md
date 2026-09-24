@@ -1,4 +1,12 @@
+<div align="center">
 
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=900&size=38&duration=2800&pause=900&color=00FF41&center=true&vCenter=true&width=900&height=75&lines=TERMUX+BANNER+AND+THEMES+CHANGER" alt="Title" />
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2800&pause=900&color=39FF14&center=true&vCenter=true&width=900&height=55&lines=%E2%9C%A6+PREMIUM+%E2%9C%A6+ELEGANT+%E2%9C%A6+PERMANENT" alt="Subtitle" />
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=2800&pause=900&color=76FF03&center=true&vCenter=true&width=900&height=45&lines=%F0%9F%9A%80+TERMUX+THEME+CHANGER+%F0%9F%9A%80" alt="Tagline" />
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=1,7,11,17,20&height=4&width=900" alt="Divider" />
 
 # ✦ N-THEME ✦
 
@@ -7,14 +15,7 @@
 *Animated Banner ⟡ Custom Prompt ⟡ Auto-Suggestion ⟡ Premium Colors*
 
 [![License](https://img.shields.io/badge/License-MIT-00E676?style=for-the-badge&labelColor=0D1117)](LICENSE)
-[![<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=32&duration=3000&pause=1000&color=FF1744&center=true&vCenter=true&width=800&height=60&lines=TERMUX+BANNER+AND+THEMES+CHANGER" alt="Banner 1" />
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=00E5FF&center=true&vCenter=true&width=800&height=50&lines=PREMIUM+%7C+ANIMATED+%7C+PERMANENT+SETUP" alt="Banner 2" />
-
-</div>]
-(https://img.shields.io/badge/Platform-Termux-00B0FF?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://termux.dev)
+[![Platform](https://img.shields.io/badge/Platform-Termux-00B0FF?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://termux.dev)
 [![Shell](https://img.shields.io/badge/Shell-Bash-64DD17?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://www.gnu.org/software/bash/)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤-FF1744?style=for-the-badge&labelColor=0D1117)](https://github.com/mohammadnoyonmahmuud)
 
@@ -185,6 +186,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ##### ⭐ If you like this project, give it a star! ⭐
 
-**Crafted with ❤ by Noyon**
+**Crafted with ❤ NOYON BRO**
 
 </div>
