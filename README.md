@@ -52,9 +52,6 @@ Before installing, make sure you have:
 </div>
 
 ---
-</div>
-
----
 
 
 
