@@ -383,9 +383,11 @@ EOF
         echo "[[ -f ~/.local/share/blesh/ble.sh ]] && source ~/.local/share/blesh/ble.sh" >> ~/.bashrc
         echo "bash $banner_script" >> ~/.bashrc
 
+        # ═══════════════════════════════════════════════════════
+        #  BLERC CONFIG (with Enter key fix)
+        # ═══════════════════════════════════════════════════════
         local blerc="$HOME/.blerc"
 
-        # Create blerc if not exists
         if [ ! -f "$blerc" ]; then
             cat << 'EOF' > "$blerc"
 # Suppress broken locale warnings in Termux safely
@@ -397,7 +399,6 @@ function ble/util/notify-broken-locale {
 bleopt edit_magic_multiline=
 EOF
         else
-            # Add locale fix if missing
             if ! grep -Fq 'ble/util/notify-broken-locale' "$blerc"; then
                 cat << 'EOF' >> "$blerc"
 
@@ -407,8 +408,6 @@ function ble/util/notify-broken-locale {
 }
 EOF
             fi
-
-            # Add multiline fix if missing
             if ! grep -Fq 'bleopt edit_magic_multiline=' "$blerc"; then
                 cat << 'EOF' >> "$blerc"
 
