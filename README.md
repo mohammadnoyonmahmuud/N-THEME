@@ -60,6 +60,16 @@ Before installing, make sure you have:
 ```bash
 pkg update -y && pkg upgrade -y && pkg install git python -y && termux-setup-storage && git clone https://github.com/mohammadnoyonmahmuud/N-THEME.git && cd N-THEME && bash install.sh
 ```
+</div>
+
+---
+
+</div>
+
+---
+
+##### ⚙ Installation manually 
+
 ##### 🔹 Step 1 — Update packages
 
 ```bash
