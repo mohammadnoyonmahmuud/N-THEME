@@ -214,7 +214,7 @@ Contributions, issues, and feature requests are welcome!
 
 ##### 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **GPL-30 License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -229,8 +229,10 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 ---
 
 <div align="center">
-
-**Crafted with ❤ NOYON BRO**
+  
+### Credits / Original Work
+##### This project is a modified version
+**Modified by: ❤ NOYON BRO**
 
 </div>
 ----
