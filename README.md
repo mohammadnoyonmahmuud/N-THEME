@@ -60,10 +60,7 @@ Before installing, make sure you have:
 
 [![GitHub](https://img.shields.io/badge/GitHub-mohammadnoyonmahmuud-181717?style=for-the-badge&logo=github&labelColor=0D1117)](https://github.com/mohammadnoyonmahmuud)
 
-</div>
-
----
-###### ⚙ Installation
+#### ⚙ Installation
 
 ##### 🔹 Step 1 — Update packages
 
@@ -116,10 +113,7 @@ bash install.sh
 
 [![GitHub](https://img.shields.io/badge/GitHub-mohammadnoyonmahmuud-181717?style=for-the-badge&logo=github&labelColor=0D1117)](https://github.com/mohammadnoyonmahmuud)
 
-</div>
-
----
-###### ◈ Menu Options
+#### ◈ Menu Options
 
 ##### 1️⃣ Download necessary files
 
