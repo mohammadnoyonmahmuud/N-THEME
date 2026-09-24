@@ -49,6 +49,12 @@ Before installing, make sure you have:
 - 💾 **~100 MB** free storage
 
 ---
+</div>
+
+---
+</div>
+
+---
 
 
 
