@@ -48,9 +48,6 @@ Before installing, make sure you have:
 - 💾 **~100 MB** free storage
 
 ---
-</div>
-
----
 
 
 
@@ -102,9 +99,6 @@ bash install.sh
 
 ---
 
-</div>
-
----
 
 
 
@@ -225,8 +219,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-##### ⭐ If you like this project, give it a star! ⭐
-
 **Crafted with ❤ NOYON BRO**
 
 </div>
+----
