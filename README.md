@@ -19,7 +19,8 @@
 
 ---
 
-## ✨ Features
+
+
 
 ## 📦 Requirements
 
@@ -32,21 +33,25 @@ Before installing, make sure you have:
 
 ---
 
+
 ## 🚀 Installation
 
-### Step 1 — Update packages
+
+
+#### Step 1 — Update packages
 
 ```bash
 pkg update && pkg upgrade -y
 ```
 
-### Step 2 — Install required packages
+
+#### Step 2 — Install required packages
 
 ```bash
 pkg install git python -y
 ```
 
-### Step 3 — Setup storage access
+#### Step 3 — Setup storage access
 
 ```bash
 termux-setup-storage
@@ -54,19 +59,19 @@ termux-setup-storage
 
 > 📱 A permission popup will appear — tap **Allow**.
 
-### Step 4 — Clone this repository
+#### Step 4 — Clone this repository
 
 ```bash
 git clone https://github.com/mohammadnoyonmahmuud/N-THEME.git
 ```
 
-### Step 5 — Enter the directory
+#### Step 5 — Enter the directory
 
 ```bash
 cd N-THEME
 ```
 
-### Step 6 — Run the installer
+#### Step 6 — Run the installer
 
 ```bash
 bash install.sh
@@ -75,7 +80,7 @@ bash install.sh
 ---
 
 
-### 1️⃣ Download necessary files
+#### 1️⃣ Download necessary files
 
 Runs an **automated step-by-step installer** in the background:
 
@@ -92,13 +97,13 @@ Runs an **automated step-by-step installer** in the background:
 
 Each step runs sequentially — one after another, cleanly.
 
-### 2️⃣ Setup Banner
+#### 2️⃣ Setup Banner
 
 - Prompts you to enter your name
 - Automatically converts it to **UPPERCASE** (`noyon` → `NOYON`)
 - Saves **permanently** as your animated banner
 
-### 3️⃣ Setup Name
+#### 3️⃣ Setup Name
 
 - Prompts you to enter your name
 - Saves as your prompt in this format:
@@ -133,7 +138,7 @@ No ✅ — `ble.sh` is lightweight and optimized. Startup delay is negligible.
 
 ---
 
-## 🛠️ Tech Stack
+#### 🛠️ Tech Stack
 
 | Tool | Purpose |
 |------|---------|
@@ -145,7 +150,7 @@ No ✅ — `ble.sh` is lightweight and optimized. Startup delay is negligible.
 
 ---
 
-## 🤝 Contributing
+#### 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -157,13 +162,13 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
+#### 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👤 Author
+#### 👤 Author
 
 <div align="center">
 
