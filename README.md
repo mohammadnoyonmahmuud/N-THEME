@@ -4,7 +4,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2800&pause=900&color=FF0000&center=true&vCenter=true&width=900&height=55&lines=%E2%9C%A6+PREMIUM+%E2%9C%A6+ELEGANT+%E2%9C%A6+PERMANENT" alt="Subtitle" />
 
-#  N-THEME 
+# ◈ N-THEMEE ◈
 
 ### ◈ A Premium Termux Theme ◈
 
