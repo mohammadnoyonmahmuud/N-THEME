@@ -10,7 +10,7 @@
 
 *Animated Banner ⟡ Custom Prompt ⟡ Auto-Suggestion ⟡ Premium Colors*
 
-[![License](https://img.shields.io/badge/License-MIT-00E676?style=for-the-badge&labelColor=0D1117)](LICENSE)
+[![License](https://img.shields.io/badge/License-GPL-3.0?style=for-the-badge&labelColor=0D1117)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Termux-00B0FF?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://termux.dev)
 [![Shell](https://img.shields.io/badge/Shell-Bash-64DD17?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://www.gnu.org/software/bash/)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤-FF1744?style=for-the-badge&labelColor=0D1117)](https://github.com/mohammadnoyonmahmuud)
