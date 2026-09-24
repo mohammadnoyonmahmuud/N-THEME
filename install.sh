@@ -26,38 +26,14 @@ BOX_WIDTH=$(( term_width > 60 ? 58 : term_width - 2 ))
 margin=$(( (term_width - BOX_WIDTH) / 2 ))
 left_pad=$(printf '%*s' "$margin" "")
 
-draw_line() {
-    printf "${C}${left_pad}%s" "$1"
-    for ((i=0; i<BOX_WIDTH-2; i++)); do printf "═"; done
-    printf "%s${RS}\n" "$2"
-}
-
-print_center() {
-    local text="$1"
-    local color="$2"
-    local len=${#text}
-    local space_len=$(( (BOX_WIDTH - 2 - len) / 2 ))
-    printf "${C}${left_pad}║%*s${color}%s${C}%*s║${RS}\n" $space_len "" "$text" $(( BOX_WIDTH - 2 - len - space_len )) ""
-}
-
+# ───────────────────────────────────────────────────────────
+#  SIMPLE BANNER (No big ASCII)
+# ───────────────────────────────────────────────────────────
 banner() {
     clear
-    local G="\e[1;32m"
-    local C="\e[1;36m"
-    local W="\e[1;37m"
-    local Y="\e[1;33m"
-    local N="\e[0m"
-
-    echo -e "${G}  ███╗   ██╗      ████████╗██╗  ██╗███████╗███╗   ███╗███████╗${N}"
-    echo -e "${G}  ████╗  ██║      ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝${N}"
-    echo -e "${C}  ██╔██╗ ██║         ██║   ███████║█████╗  ██╔████╔██║█████╗  ${N}"
-    echo -e "${C}  ██║╚██╗██║         ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  ${N}"
-    echo -e "${Y}  ██║ ╚████║         ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗${N}"
-    echo -e "${Y}  ╚═╝  ╚═══╝         ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝${N}"
     echo -e ""
-    echo -e "${W}        --[ ${G}PREMIUM TERMUX BANNER & THEME CHANGER ${W}]--${N}"
-    echo -e ""
-    echo -e "${G}  ==============================================${N}"
+    echo -e "${G}        --[ ${W}PREMIUM TERMUX BANNER & THEME CHANGER ${G}]--  ${Y}BY ${C}NOYON${RS}"
+    echo -e "${G}  ==============================================${RS}"
     echo -e ""
 }
 
@@ -118,7 +94,6 @@ do_bash_quick_setup() {
 
     ensure_dependencies
 
-    # ble.sh (skip if exists)
     if [ ! -d ~/.local/share/blesh ]; then
         echo -e "${Y}[*] INSTALLING BLE.SH (AUTO-SUGGESTION)...${RS}"
         mkdir -p /tmp
@@ -131,7 +106,6 @@ do_bash_quick_setup() {
         fi
     fi
 
-    # lolcat
     if ! command -v lolcat &>/dev/null; then
         pkg install ruby -y >/dev/null 2>&1
         gem install lolcat >/dev/null 2>&1 || true
@@ -141,7 +115,7 @@ do_bash_quick_setup() {
 }
 
 # ───────────────────────────────────────────────────────────
-#  OPTION 03 — SETUP AI (Auto — JetBrains Mono variant 60)
+#  OPTION 03 — SETUP AI (Auto JetBrains Mono)
 # ───────────────────────────────────────────────────────────
 do_font_auto_setup() {
     banner
@@ -260,7 +234,6 @@ EOF
 
     chmod +x "$banner_script"
 
-    # ─── Bash Setup ───
     if [ "$shell" = "bash" ]; then
         [ -f ~/.bashrc ] && cp ~/.bashrc ~/.bashrc.bak
 
@@ -269,46 +242,34 @@ EOF
 export LANG=en_US.UTF-8
 export LC_CTYPE=POSIX
 
-# Disable bracketed paste (fixes multi-line issue)
 bind 'set enable-bracketed-paste off' 2>/dev/null
 
-# ble.sh (auto-suggestion)
 [[ -f ~/.local/share/blesh/ble.sh ]] && source ~/.local/share/blesh/ble.sh
 
-# Banner
 bash ~/.n-theme-banner.sh
 
-# Aliases
 alias l='ls -la'
 alias ll='ls -l'
 EOF
 
-        # ═══ .blerc — ENTER KEY FIX ═══
         cat > "$HOME/.blerc" << 'EOF'
-# Suppress broken locale warnings
 function ble/util/notify-broken-locale {
   return 0
 }
-
-# === ENTER KEY FIX ===
 bleopt edit_magic_accept=
 bleopt edit_magic_multiline=
 bleopt term_bracketed_paste_mode=off
-
-# Bind Enter to accept-line in all modes
 ble-bind -m emacs -f C-m 'accept-line'
 ble-bind -m vi_imap -f C-m 'accept-line'
 ble-bind -m vi_nmap -f C-m 'accept-line'
 EOF
 
-        # ═══ .inputrc — Extra fix ═══
         cat > "$HOME/.inputrc" << 'EOF'
 set enable-bracketed-paste off
 set editing-mode emacs
 "\C-m": accept-line
 EOF
 
-        # Git-aware prompt
         cat << 'EOF' >> ~/.bashrc
 set_bash_prompt() {
     local EXIT="$?"
@@ -349,6 +310,7 @@ EOF
 #  SECURITY & UPDATES
 # ───────────────────────────────────────────────────────────
 do_add_lock() {
+    banner
     echo -e "\n${C}INITIALISING SECURITY PROTOCOL...${RS}"
     echo -ne "${Y}CREATE ACCESS KEY: ${RS}"
     read -s new_pass
@@ -390,6 +352,7 @@ done
 }
 
 do_remove_lock() {
+    banner
     sed -i '/#LOCK_START/,/#LOCK_END/d' ~/.bashrc
     echo -e "${R}LOCK REMOVED.${RS}"
     sleep 2
@@ -397,13 +360,13 @@ do_remove_lock() {
 }
 
 # ───────────────────────────────────────────────────────────
-#  OPTION 03 (in system_menu) — AUTO UPDATE
+#  AUTO UPDATE
 # ───────────────────────────────────────────────────────────
 do_update() {
     banner
     echo -e "${Y}[*] AUTO UPDATING N-THEME...${RS}"
     echo ""
-    cd "$REPO_DIR"
+    cd "$REPO_DIR" 2>/dev/null
 
     if [ ! -d .git ]; then
         echo -e "${R}[!] NOT A GIT REPOSITORY.${RS}"
@@ -412,7 +375,7 @@ do_update() {
         return
     fi
 
-    echo -e "${C}[*] Fetching latest version...${RS}"
+    echo -e "${C}[*] FETCHING LATEST VERSION...${RS}"
     git fetch origin 2>/dev/null
 
     local BRANCH=$(git branch --show-current)
@@ -445,6 +408,9 @@ do_update() {
     fi
 }
 
+# ───────────────────────────────────────────────────────────
+#  SUB MENU — SECURITY & UPDATES
+# ───────────────────────────────────────────────────────────
 system_menu() {
     banner
     printf "\n${left_pad}${C}[${W}01${C}]${B} ADD CYBER LOCK"
