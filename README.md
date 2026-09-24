@@ -232,6 +232,7 @@ This project is licensed under the **GPL-30 License** — see the [LICENSE](LICE
   
 ### Credits / Original Work
 ##### This project is a modified version
+###### thanks to h4ck3r0 Brother
 **Modified by: ❤ NOYON BRO**
 
 </div>
