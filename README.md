@@ -57,7 +57,7 @@ Before installing, make sure you have:
 
 
 
-##### ⚙ Installation
+# ⚙ Installation
 
 ##### 🔹 Step 1 — Update packages
 
@@ -107,7 +107,7 @@ bash install.sh
 
 
 
-##### ◈ Menu Options
+# ◈ Menu Options
 
 ##### 1️⃣ Download necessary files
 
