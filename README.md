@@ -54,7 +54,7 @@ Before installing, make sure you have:
 
 [![GitHub](https://img.shields.io/badge/GitHub-mohammadnoyonmahmuud-181717?style=for-the-badge&logo=github&labelColor=0D1117)](https://github.com/mohammadnoyonmahmuud)
 
-#### ⚙ Installation
+
 
 ###### ⚙ SIMPLY SINGLE COMMAND
 ```bash
@@ -68,7 +68,7 @@ pkg update -y && pkg upgrade -y && pkg install git python -y && termux-setup-sto
 
 ---
 
-##### ⚙ Installation manually 
+### ⚙ Installation manually 
 
 ##### 🔹 Step 1 — Update packages
 
