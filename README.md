@@ -1,6 +1,4 @@
-<div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=42&pause=1000&color=FF1744&center=true&vCenter=true&width=800&height=80&lines=TERMUX+BANNER+AND+THEMES+CHANGER" alt="Animated Banner" />
 
 # ✦ N-THEME ✦
 
@@ -9,7 +7,14 @@
 *Animated Banner ⟡ Custom Prompt ⟡ Auto-Suggestion ⟡ Premium Colors*
 
 [![License](https://img.shields.io/badge/License-MIT-00E676?style=for-the-badge&labelColor=0D1117)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Termux-00B0FF?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://termux.dev)
+[![<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=32&duration=3000&pause=1000&color=FF1744&center=true&vCenter=true&width=800&height=60&lines=TERMUX+BANNER+AND+THEMES+CHANGER" alt="Banner 1" />
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=00E5FF&center=true&vCenter=true&width=800&height=50&lines=PREMIUM+%7C+ANIMATED+%7C+PERMANENT+SETUP" alt="Banner 2" />
+
+</div>]
+(https://img.shields.io/badge/Platform-Termux-00B0FF?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://termux.dev)
 [![Shell](https://img.shields.io/badge/Shell-Bash-64DD17?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)](https://www.gnu.org/software/bash/)
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤-FF1744?style=for-the-badge&labelColor=0D1117)](https://github.com/mohammadnoyonmahmuud)
 
