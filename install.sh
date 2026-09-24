@@ -384,21 +384,38 @@ EOF
         echo "bash $banner_script" >> ~/.bashrc
 
         local blerc="$HOME/.blerc"
+
+        # Create blerc if not exists
         if [ ! -f "$blerc" ]; then
             cat << 'EOF' > "$blerc"
 # Suppress broken locale warnings in Termux safely
 function ble/util/notify-broken-locale {
   return 0
 }
+
+# Disable multi-line auto detect (fixes Enter key issue)
+bleopt edit_magic_multiline=
 EOF
-        elif ! grep -Fq 'ble/util/notify-broken-locale' "$blerc"; then
-            cat << 'EOF' >> "$blerc"
+        else
+            # Add locale fix if missing
+            if ! grep -Fq 'ble/util/notify-broken-locale' "$blerc"; then
+                cat << 'EOF' >> "$blerc"
 
 # Suppress broken locale warnings in Termux safely
 function ble/util/notify-broken-locale {
   return 0
 }
 EOF
+            fi
+
+            # Add multiline fix if missing
+            if ! grep -Fq 'bleopt edit_magic_multiline=' "$blerc"; then
+                cat << 'EOF' >> "$blerc"
+
+# Disable multi-line auto detect (fixes Enter key issue)
+bleopt edit_magic_multiline=
+EOF
+            fi
         fi
 
         if [ "$prompt_layout" = "cyberpunk" ]; then
