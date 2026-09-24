@@ -215,7 +215,7 @@ Contributions, issues, and feature requests are welcome!
 ##### 📄 License
 
 This project is licensed under the **GPL-30 License** — see the [LICENSE](LICENSE) file for details.
-
+###### thanks to h4ck3r0 Brother
 ---
 
 ##### 👤MODED AUTHOR
@@ -232,7 +232,6 @@ This project is licensed under the **GPL-30 License** — see the [LICENSE](LICE
   
 ### Credits / Original Work
 ##### This project is a modified version
-###### thanks to h4ck3r0 Brother
 **Modified by: ❤ NOYON BRO**
 
 </div>
